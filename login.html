@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Conf 2026 | Registration</title>
+    <link rel="icon" href="../assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/validation.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <img src="../assets/images/logo-full.svg"
+             alt="Coding Conf" class="logo">
+    </header>
+
+    <main class="registration">
+        <h1>Your Journey to Coding Conf 2026 Starts Here!</h1>
+
+        <p class="subtitle">
+            Secure your spot at this year's biggest
+            coding conference.
+        </p>
+
+        <form id="registrationForm" novalidate>
+            <div class="form-group">
+                <label id="avatarLabel" for="avatar">
+                    Upload Avatar
+                </label>
+
+                <div class="upload-box" id="uploadBox"
+                     role="button" tabindex="0"
+                     aria-labelledby="avatarLabel"
+                     aria-describedby="avatarMessage">
+                    <img src="../assets/images/icon-upload.svg"
+                         alt="" id="uploadIcon">
+
+                    <img id="avatarPreview"
+                         alt="Selected avatar preview" hidden>
+
+                    <p id="uploadText">
+                        Click to upload your photo
+                    </p>
+
+                    <div id="imageActions" hidden>
+                        <button type="button" id="removeImage">
+                            Remove image
+                        </button>
+                        <button type="button" id="changeImage">
+                            Change image
+                        </button>
+                    </div>
+                </div>
+
+                <input type="file" id="avatar"
+                       name="avatar"
+                       accept=".jpg,.jpeg,.png,image/jpeg,image/png"
+                       class="visually-hidden"
+                       tabindex="-1">
+
+                <p class="hint" id="avatarMessage" aria-live="polite">
+                    <img src="../assets/images/icon-info.svg" alt="">
+                    <span id="avatarHint">
+                        Upload your photo (JPG or PNG, max size: 500KB).
+                    </span>
+                </p>
+            </div>
+
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName"
+                       name="fullName" autocomplete="name"
+                       aria-describedby="nameError">
+                <p class="error" id="nameError" aria-live="polite"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email"
+                       name="email" autocomplete="email"
+                       placeholder="example@email.com"
+                       aria-describedby="emailError">
+                <p class="error" id="emailError" aria-live="polite"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="github">GitHub Username</label>
+                <input type="text" id="github"
+                       name="github"
+                       placeholder="@yourusername"
+                       aria-describedby="githubError">
+                <p class="error" id="githubError" aria-live="polite"></p>
+            </div>
+
+            <button type="submit" class="generate-btn">
+                Generate My Ticket
+            </button>
+        </form>
+    </main>
+</body>
+</html>
